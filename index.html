@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Airbnb</title>
+  <!-- JQuery NE PAS SUPPRIMER -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header>
+
+    <!-- LA NAV BAR DE FIREFOX -->
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+    <div class="col-lg-6 logo">
+    <img src="gallery/airbnb-ico.png"/>
+  </div>
+  <div class="col-lg-6 liens-nav">
+  <ul class="nav navbar-nav navbar-text navbar-right">
+  <li>
+  <button type="button" class="btn btn-default navbar-btn"> Devenez hôte</button>
+</li>
+<li>
+<a class="links-menu" href="#">Aide</a>
+</li>
+<li>
+<a class="links-menu" href="#">Inscription</a>
+</li>
+<li>
+<a class="links-menu" href="#">Connexion</a>
+</li>
+</ul>
+</div>
+
+</div>
+</nav> -->
+
+<!-- FIN DE LA NAV BAR DE FIREFOX -->
+
+<!-- LA NAV BAR DE CHROME -->
+<!--
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+
+<div class="navbar-left logo">
+<img src="gallery/airbnb-ico.png"/>
+</div>
+
+<form class="navbar-form navbar-left" role="search">
+<div class="form-group">
+<input type="text" class="form-control where" placeholder="Où">
+</div>
+</form>
+
+<div class="liens-nav">
+<ul class="nav navbar-nav navbar-text navbar-right">
+<li class="bloc">
+<button type="button" class="btn btn-default navbar-btn"> Devenez hôte</button>
+</li>
+<li class="border-nav">
+<a class="links-menu" href="#">Aide</a>
+</li>
+<li class="border-nav bloc">
+<a class="links-menu" href="#">Inscription</a>
+</li>
+<li class="border-nav bloc">
+<a class="links-menu" href="#">Connexion</a>
+</li>
+</ul>
+</div>
+
+</div>
+</nav> -->
+
+<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo" href="#">
+        <img src="gallery/airbnb-ico.png"/>
+      </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left where">
+        <div class="form-group">
+          <input class="form-control form-ou" placeholder="Où ?" type="text">
+        </div>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right liens-nav">
+
+        <li class="bloc">
+          <button type="button" class="btn btn-default navbar-btn"> Devenez hôte</button>
+        </li>
+        <li class="border-nav">
+          <a class="links-menu" href="#">Aide</a>
+        </li>
+        <li class="border-nav bloc">
+          <a class="links-menu" href="#">Inscription</a>
+        </li>
+        <li class="border-nav bloc">
+          <a class="links-menu" href="#">Connexion</a>
+        </li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- FIN DE LA NAV BAR DE CHROME -->
+
+<div class="container-fluid img-bg-header">
+  <div class="row marg-top-txt-header">
+    <span class="col-lg-8 col-lg-offset-2 flex-txt-header">
+      <h1>Vivez là-bas</h1>
+      Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.
+    </span>
+    <div class="col-lg-6 col-lg-offset-3 display-but">
+      <!-- <button type="button" class="btn btn-default but">En savoir plus sur Airbnb</button> -->
+      <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i>
+    </div>
+
+    <div class="col-lg-12 bg-form-header">
+      <div class="col-lg-10 col-lg-offset-1">
+        <form class="form-inline bg2-form">
+          <div class="form-group form-where">
+            <input type="text" class="form-control width-form-where" id="exampleInputName2" placeholder="Où">
+          </div>
+          <div class="form-group form-arrive">
+            <input type="text" class="form-control width-form-arrive" id="exampleInputEmail2" placeholder="Arrivé">
+          </div>
+          <div class="form-group">
+            <i class="fa fa-long-arrow-right fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="form-group form-depart">
+            <input type="text" class="form-control width-form-depart" id="exampleInputEmail2" placeholder="Départ">
+          </div>
+
+          <ul class="form-group form-dpdown">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                1 voyageur
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    2 voyageurs
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    3 voyageurs
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    4 voyageurs
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button type="submit" class="btn btn-default form-search">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> <!-- container fluid -->
+</header>
+
+<!-- SECTION PHOTOS -->
+<section class="bg-section">
+  <div class="container-fluid">
+    <div class="row" style="margin:0px;">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-lg-8 section-bloc" id="bloc1">
+          <img src="https://a0.muscache.com/airbnb/static/homepages/host_banner/green-doors-da92547ad2e02558af61a61405d4a414.jpg"/>
+        </div>
+        <div class="col-lg-4 section-bloc" id="bloc2">
+          <div class="position-txt">
+            <h2>Ouvrez la porte à un voyageur et à une nouvelle vie</h2>
+            <h4>Gagnez de l'argent en accueillant des voyageurs.</h4>
+            <button type="submit" class="btn btn-default btn-lg estimer">Estimer mes revenus</button>
+          </div>
+        </div>
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container fluid -->
+</section>
+
+<div class="container-fluid text-only">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3" style="text-align:center;">
+      <h3>Juste pour le week-end</h2>
+      <h5>Découvrez de nouveaux logements incroyables près de chez vous.</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bloc-troisimg">
+<div class="container">
+  <div class="col-lg-4">
+    <div class="col-lg-12 troisimg">
+      <span class="lieux"> Lille </span>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="col-lg-12 troisimg2">
+      <span class="lieux"> Bruxelles </span>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="col-lg-12 troisimg3">
+      <span class="lieux"> Londres </span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid text-only">
+  <div class="col-lg-6 col-lg-offset-3 pos-destinations">
+    <button type="submit" class="btn btn-default btn-lg destinations">Voir toutes les destinations</button>
+  </div>
+</div>
+
+<div class="container-fluid text-only">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3" style="text-align:center;">
+      <h3>Explorez le monde</h2>
+      <h5>Découvrez les destinations les plus prisées à travers le monde.</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bloc-xl-all">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-8 padding-b-bloc-xl">
+      <div class="col-lg-12 bloc-xl">
+        <span class="lieux"> Lisbonne </span>
+    </div>
+    </div>
+    <div class="col-lg-4 padding-b-bloc-xl">
+      <div class="col-lg-12 bloc-xl2">
+        <span class="lieux"> Chez Paul et Jessica </span>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 padding-b-bloc-xl">
+        <div class="col-lg-12 bloc-xl3">
+          <span class="lieux"> Amsterdam </span>
+      </div>
+      </div>
+      <div class="col-lg-4 padding-b-bloc-xl">
+        <div class="col-lg-12 bloc-xl4">
+          <span class="lieux"> New York </span>
+      </div>
+      </div>
+      <div class="col-lg-4 padding-b-bloc-xl">
+        <div class="col-lg-12 bloc-xl5">
+          <span class="lieux"> Espace romantique à Venise </span>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 padding-b-bloc-xl">
+        <div class="col-lg-12 bloc-xl6">
+          <span class="lieux"> Chez Susanna </span>
+      </div>
+    </div>
+    <div class="col-lg-8 padding-b-bloc-xl">
+      <div class="col-lg-12 bloc-xl7">
+        <span class="lieux"> Rome </span>
+    </div>
+    </div>
+
+</div>
+
+    <div class="row">
+      <div class="col-lg-4 padding-b-bloc-xl">
+          <div class="col-lg-12 bloc-xl8">
+            <span class="lieux"> Berlin </span>
+        </div>
+        </div>
+        <div class="col-lg-4 padding-b-bloc-xl">
+          <div class="col-lg-12 bloc-xl9">
+            <span class="lieux"> Bordeaux </span>
+        </div>
+        </div>
+        <div class="col-lg-4 padding-b-bloc-xl">
+          <div class="col-lg-12 bloc-xl10">
+            <span class="lieux"> Surf à Biarritz </span>
+        </div>
+        </div>
+      </div>
+
+</div>
+</div>
+
+</body>
+</html>
