@@ -3,27 +3,28 @@ body {
   margin : 0;
   padding: 0;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: @bgrey;
 }
 
 // PALETTE
-
 @white : #ffffff;
 @grey : rgba(55, 53, 53, 0.7);
 @darkgrey : #191a1a;
 @lightgrey : #E7E7E7;
 @turquoise : #009AAB;
 @corail: #FF7E82;
-@pourpre : #7B0051;
+@prune : #7B0051;
 @textgrey: #484848;
 @bgrey : #EDEFED;
-
+@dark-color: darken(@turquoise, 5%);
 
 // NAV
 
+.form-control {
+  box-shadow: none !important;
+}
+
 .navbar-default {
-  // !! En commentaire = ma nav firefox !!
-  // background-color: transparent;
-  // border: none;
   background-color: @white;
   margin: 0;
 }
@@ -39,25 +40,16 @@ body {
 .liens-nav {
   ul {
     list-style: none;
-
     li {
       .links-menu {
-        // MA COULEUR FIREFOX
-        // color: @white;
         padding-right: 30px;
         padding-left: 30px;
         color : @darkgrey;
-        // &:hover {
-        //   // color: @white;
-        // }
-
       }
     }
   }
 
-  // OVER & BORDER DES BLOCS DE LA NAV POUR CHROME
-
-  .bloc {
+  .btn-hote {
     &:hover {
       background-color: @grey;
     }
@@ -66,11 +58,8 @@ body {
   .border-nav {
     border-left: 1px solid @lightgrey;
   }
-
-  //
   .navbar-btn {
     background-color: transparent;
-    // border: 1px solid @white;
     border: 3px solid @lightgrey;
     border-radius: 2px;
     margin-right: 15px;
@@ -78,11 +67,7 @@ body {
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
-    // color: @white;
     color: @darkgrey;
-    // &:hover {
-    //   background-color: @grey;
-    // }
   }
 }
 
@@ -95,20 +80,19 @@ body {
   background-position: center;
   background-size: cover;
   height: 600px;
-
   .flex-txt-header {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
     color: @white;
     font-weight: bold;
+    text-align: center;
   }
-
   .marg-top-txt-header {
     margin-top: 210px;
   }
-
   h1 {
     font-size: 60px;
     font-weight: bold;
@@ -120,7 +104,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-
   .but {
     background-color: #ffffff;
     border: none;
@@ -133,8 +116,17 @@ body {
   }
 }
 
-
 // HEADER - BG - FORMS
+
+.fa-play-circle {
+  color: rgba(231, 233, 235, 0.56);
+}
+
+
+.form-ou {
+  border-radius: 0 !important;
+  border: none;
+}
 
 .bg-form-header {
   background-color: @grey;
@@ -142,78 +134,91 @@ body {
   padding-bottom: 30px;
   margin-top: 83px;
 
+  .form-control {
+    border: none;
+  }
   .bg2-form {
     background-color: @white;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    flex-wrap: wrap;
-
-    .form-where {
-      background-color: @white;
-      .width-form-where {
-        width: 400px;
-        padding: 0;
+    .form-input {
+      background-color: white;
+    }
+    .width-form-where {
+      box-shadow: none !important;
+      width: 534px;
+    }
+    .form-arrive {
+      border-left: 1px solid @grey;
+      .width-form-arrive {
+        box-shadow: none !important;
       }
     }
     .form-depart {
-      background-color: @white;
       border-right: 1px solid @grey;
       .width-form-depart {
-        width: 120px;
-      }
-    }
-    .form-arrive {
-      background-color: @white;
-      border-left: 1px solid @grey;
-      .width-form-arrive {
-        width: 120px;
+        box-shadow: none !important;
       }
     }
     .form-dpdown {
+      padding-right: 10px;
+      padding-left: 10px;
       list-style: none !important;
-      padding: 10px !important;
     }
-
     .form-search {
       background-color: @corail;
       border: none;
-      width: 129px;
-      margin-right: -20px;
-      border-radius: 0 !important;
+      border-radius: 0px;
+      font-size: 16px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: 5px;
+      color: white;
     }
   }
 }
 
-.form-control {
-  border: none;
-}
-
-.form-ou {
-  border-radius: 0 !important;
-  border: none;
-}
-
-.dropdown-menu {
-  overflow: hidden;
-}
+// VIDEOS
+// video {
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     min-width: 100%;
+//     min-height: 100%;
+//     width: auto;
+//     height: auto;
+//     z-index: -100;
+//     transform: translateX(-50%) translateY(-50%);
+//  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+//   background-size: cover;
+//   transition: 1s opacity;
+// }
+// .stopfade {
+//    opacity: .5;
+// }
 
 // SECTION PHOTOS
 
-.bg-section {
-  background-color: @bgrey;
-  .section-bloc {
+section {
+  background-color: #EDEFED;
+  .top-slider {
     background-color: @white;
-    color: @textgrey;
+    padding-left: 0;
     margin-top: 50px;
+    .padding-delete {
+      padding-left: 0;
+    }
+    img {
+      width: 100%;
+      height: 344px !important;
+    }
     h2 {
       font-weight: bold;
       font-size: 27px;
-      padding-bottom:30px;
+      padding-bottom:14px;
     }
     .position-txt {
-      padding-top: 60px;
+      padding-top: 50px;
       display: flex;
       justify-content: center;
       align-content: center;
@@ -225,30 +230,28 @@ body {
       color: @white;
       font-size: 15px;
       font-weight: bold;
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       border-radius: 0 !important;
+      &:hover {
+        background-color: lighten(@turquoise, 5%);
+        transition-duration: 0.1s;
+        transition-delay: 0.2s;
+      }
     }
-
     h4 {
       font-size: 15px;
-      padding-bottom:30px;
+      padding-bottom:22px;
     }
-  }
-  #bloc1 {
-    padding-left: 0;
-  }
-  #bloc2 {
-    padding-bottom: 12px;
   }
 }
 
 .text-only {
-  background-color: @bgrey;
   h3 {
     color: @textgrey;
     font-weight: bold;
     font-size: 30px;
+    padding-top: 30px;
   }
   h5 {
     color: @textgrey;
@@ -257,9 +260,7 @@ body {
 }
 
 .bloc-troisimg {
-  background-color: @bgrey;
   padding-top: 60px;
-
   .troisimg {
     background: url(https://a1.muscache.com/ic/discover/60?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px);
     background-size: contain;
@@ -268,7 +269,6 @@ body {
     text-align: center;
     background-repeat: no-repeat;
     height: 300px;
-
   }
   .troisimg2 {
     background: url(https://a0.muscache.com/ic/discover/2510?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px);
@@ -278,7 +278,6 @@ body {
     background-repeat: no-repeat;
     height: 300px;
     padding-top: 140px;
-
   }
   .troisimg3 {
     background: url(https://a0.muscache.com/ic/discover/41?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px);
@@ -289,38 +288,73 @@ body {
     height: 300px;
     padding-top: 140px;
   }
-
+  .troisimg4 {
+    background-image: url("https://a2.muscache.com/ac/pictures/2a4e63c3-c981-4cbc-9c37-80a6ab3a9d24.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70");
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding-top: 140px;
+  }
+  .troisimg5 {
+    background-image: url("https://a2.muscache.com/ac/pictures/cf3b9363-34e4-4532-b051-6a7663410854.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70");
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding-top: 140px;
+  }
+  .troisimg6 {
+    background-image: url("https://a2.muscache.com/ac/pictures/b62aa572-cf0b-4e4a-b886-a039a0250cf3.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70");
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding-top: 140px;
+  }
   .lieux {
     color: @white;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
   }
-
+  a {
+    text-decoration: none;
+  }
 }
 
 .pos-destinations {
   padding-top: 50px;
-  padding-bottom: 50px;
   text-align: center;
 }
 .destinations {
   background-color: @white;
   border: 1px solid @grey;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 0 !important;
+  &:hover {
+    background-color: @white;
+  }
+}
+.text-bouton {
+  font-size: 17px;
+  font-weight: bold;
+  color: @textgrey;
 }
 
 .bloc-xl-all {
-
-  background-color: @bgrey;
   padding-top: 30px;
-
   .padding-b-bloc-xl {
     padding-bottom: 20px;
     padding-right: 9px;
     text-align: center;
   }
-
   .bloc-xl {
     background-image: url("https://a0.muscache.com/ic/discover/180?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=655px:326px");
     background-size: cover;
@@ -328,7 +362,6 @@ body {
     padding-left: 0;
     padding-right: 0;
     height: 300px;
-
   }
   .bloc-xl2 {
     background-image: url("https://a0.muscache.com/im/pictures/10389108/0bf5beb7_original.jpg?aki_policy=x_medium");
@@ -338,7 +371,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
   .bloc-xl3 {
     background-image: url("https://a2.muscache.com/ic/discover/9?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px");
     background-size: cover;
@@ -347,7 +379,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
   .bloc-xl4 {
     background-image: url("https://a1.muscache.com/ic/discover/84?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px");
     background-size: cover;
@@ -356,7 +387,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
   .bloc-xl5 {
     background-image: url("https://a0.muscache.com/ic/pictures/discovery/attribute_photos/romantic_1x1.jpg?interpolation=lanczos-none&output-format=jpg&output-quality=70&size=large_cover&downsize=326px:326px&v=6");
     background-position: center;
@@ -365,7 +395,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
   .bloc-xl6 {
     background-image: url("https://a1.muscache.com/im/pictures/11352162/82f4a41d_original.jpg?aki_policy=x_medium");
     background-size: cover;
@@ -408,7 +437,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
   span {
     color: @white;
     font-size: 25px;
@@ -416,4 +444,466 @@ body {
     text-align: center;
     padding-top: 40px;
   }
+  a {
+    text-decoration: none;
+  }
 }
+
+.carousel-inner {
+  .carousel-img1 {
+    background: url(https://a2.muscache.com/airbnb/static/homepages/belong-vid-b5b9b5ff3b53a7a4229d4acde53fb161.jpg);
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: @white;
+  }
+  .carousel-img2 {
+    background: url(https://a0.muscache.com/airbnb/static/homepages/belo-vid-078cd6a63626517f9294598ceda49ee5.jpg);
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: @white;
+  }
+  .carousel-img3 {
+    background: url(https://a2.muscache.com/airbnb/static/homepages/vacation-rentals-banner-f9a857d36e05fa6dff10893587085326.png);
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: @white;
+  }
+  .carousel-img4 {
+    background: url(https://a1.muscache.com/airbnb/static/homepages/create-02-06fcf9119127632bdeeec8a3aa2cddce.png);
+    background-color: orange;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: @white;
+  }
+  .carousel-text {
+    text-align: center;
+    text-shadow: 0px 0px 6px rgba(150, 150, 150, 0.5);
+    h1 {
+      padding-top: 200px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 60px;
+    }
+    .fa-opacity {
+      margin-top: 30px;
+      color: rgba(255, 255, 255, 0.83);
+    }
+  }
+
+  .carousel-text2 {
+    text-shadow: 0px 0px 6px rgba(150, 150, 150, 0.5);
+    text-align: left;
+    padding-top: 400px;
+    img {
+      float: right;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    h3 {
+      color: rgba(247, 217, 157, 0.93);
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+}
+
+.text-only2 {
+  h3 {
+    color: @textgrey;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.bloc-quatreimg {
+  padding-top: 20px;
+  .entete {
+    padding-top: 9px;
+    span {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+      color: @white;
+      font-weight: bold;
+    }
+    .img-first-panel {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-bottom: 310px;
+      img {
+        width: 100px;
+      }
+    }
+    .spanyellow {
+      background-color: @turquoise;
+    }
+    .spanblue {
+      background-color: @textgrey;
+    }
+    .spanred {
+      background-color: @prune;
+    }
+  }
+
+  .quatreimg1 {
+    background: url(https://a1.muscache.com/airbnb/static/homepages/create-img-bd380285eda2b7e32ba35c00c10699b7.png);
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 490px;
+    background-color: @turquoise;
+
+    &:hover {
+      transition-delay: 0.2s;
+      transition-duration: 0.5s;
+      background-color: @dark-color;
+    }
+  }
+  .quatreimg2 {
+    background: url(https://a1.muscache.com/airbnb/static/homepages/traveling-edebfe1eafd15383d4872876d41bd50e.jpg);
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 490px;
+    &:hover {
+      transition-delay: 0.1s;
+      transition-duration: 0.1s;
+      box-shadow: inset 0px 0px 300px 0px rgba(107, 107, 104, 0.3);
+    }
+  }
+  .quatreimg3 {
+    background: url(https://a2.muscache.com/airbnb/static/homepages/hosting-74e04c88d4df9607cc3025401a43c665.jpg);
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 490px;
+    &:hover {
+      transition-delay: 0.1s;
+      transition-duration: 0.1s;
+      box-shadow: inset 0px 0px 300px 0px rgba(107, 107, 104, 0.3);
+    }
+  }
+  .quatreimg4 {
+    background: url(https://a1.muscache.com/airbnb/static/homepages/business-56c80d9222a2e084253f33e893f8bd32.jpg);
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 490px;
+    &:hover {
+      transition-delay: 0.1s;
+      transition-duration: 0.1s;
+      box-shadow: inset 0px 0px 300px 0px rgba(107, 107, 104, 0.3);
+    }
+  }
+  .text-blocs {
+    color: @white;
+    .firstcard {
+      margin-top: 0px;
+      font-size: 21px;
+    }
+    h3 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 250px;
+    }
+    h5 {
+      font-size: 15px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: @white;
+    }
+  }
+}
+
+footer {
+  background: url(https://a0.muscache.com/airbnb/static/footer/background-317dd7c2cb678ddbdb0a983d511cb9a0.png);
+  background-color: #2b2d2e;
+  padding-top: 50px;
+  a {
+    color: @white;
+    &:hover {
+      color: rgb(140, 136, 140);
+      text-decoration: none;
+    }
+  }
+  .bloc-input {
+    select {
+      width: 100%;
+      background-color: @textgrey;
+      border: none;
+      border-radius: 0px;
+      margin-bottom: 10px;
+      color: @white;
+      height: 45px;
+    }
+  }
+  ul {
+    list-style: none;
+    color: @white;
+    padding-left: 20px;
+    .li-header {
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+  }
+  hr {
+    width: 80%;
+    opacity: 0.5;
+  }
+
+  .footer-bottom-text {
+    color: @white;
+    text-align: center;
+    i {
+      margin-right: 10px;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border: 1px solid rgba(142, 139, 139, 0.51);
+      border-radius: 100%;
+      &:hover {
+        color: rgb(140, 136, 140);
+        text-decoration: none;
+        }}
+        h5 {
+          font-weight: bold;
+          padding-bottom: 15px;
+        }
+        h6 {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    @media screen and (min-width : 320px) and (max-width : 640px) {
+
+      .navbar-default {
+        .navbar-toggle {
+          float: left;
+        }
+      }
+      .container {
+        padding: 0;
+      }
+      .img-bg-header {
+        height: auto;
+        .marg-top-txt-header {
+          margin-top: 135px;
+          .flex-txt-header {
+            text-align: center;
+            h1 {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+      .bg-form-header {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        .bg2-form {
+          margin-top: 50px;
+          .width-form-where {
+            width: 268px;
+          }
+        }
+      }
+
+      .top-slider {
+        background: url(https://a1.muscache.com/airbnb/static/homepages/host_banner/welcome-guest-5871637891339a7308a838003ab942bd.jpg);
+        background-position: center;
+        box-shadow: inset 0px 0px 300px 0px #2d2b2b;
+        .position-txt {
+          text-align: center;
+          color: @white;
+          box-shadow: ;
+          h2 {
+            font-size: 18px;
+            padding: 0;
+          }
+          .estimer {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      .bloc-troisimg {
+        padding: 0;
+        .nopadding-mq {
+          padding: 0;
+          .troisimg {
+            background-size: auto;
+          }
+          .troisimg2 {
+            background-size: auto;
+          }
+          .troisimg3 {
+            background-size: auto;
+          }
+          .troisimg4 {
+            margin-bottom: -120px;
+          }
+          .troisimg5 {
+            margin-bottom: -120px;
+          }
+        }
+      }
+      .bloc-input {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+          flex-direction: row;
+          padding-top: 10px;
+        }
+        li {
+          padding-right: 10px;
+          font-weight: bold;
+        }
+      }
+
+      .bloc-xl-all {
+        .padding-b-bloc-xl {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+
+    }
+
+    @media screen and (min-width : 768px) and (max-width : 1024px) {
+
+      .container-fluid {
+        padding: 0;
+        .form-ou {
+          padding: 0;
+        }
+        .liens-nav {
+          margin-right: 0;
+        }
+      }
+
+      .bg-form-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 81px;
+        .bg2-form {
+          .width-form-where {
+            width: 231px;
+          }
+          .width-form-depart {
+            width: 100px;
+          }
+          .width-form-arrive {
+            width: 100px;
+          }
+        }
+      }
+
+      section {
+        .top-slider {
+          .item {
+            img {
+              height: 275px !important;
+            }
+          }
+          .position-txt {
+            padding-top: 24px;
+            h2 {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+
+      .bloc-troisimg {
+        .troisimg {
+          background-size: auto;
+          margin-bottom: 30px;
+        }
+      }
+      .bloc-xl-all {
+        .padding-b-bloc-xl {
+          .berlin-devient-rome {
+            background-image: url("https://a0.muscache.com/ic/discover/291?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=655px:326px");
+          }
+          .rome-devient-berlin {
+            background-image: url("https://a1.muscache.com/ic/discover/94?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px");
+          }
+        }
+      }
+
+      .bloc-troisimg {
+        .troisimg4 {
+          background-size: cover;
+          margin-bottom: 30px;
+        }
+        .troisimg5 {
+          background-size: auto;
+        }
+        .troisimg6 {
+          background-size: auto;
+        }
+      }
+
+      .bloc-quatreimg {
+        padding-bottom: 30px;
+        .panel {
+          border-radius: 0px;
+          margin-bottom: 0px;
+        }
+        .quatreimg2 {
+          margin-bottom: 30px;
+        }
+      }
+
+      .carousel-inner {
+        .carousel-img1 {
+          height: 400px;
+        }
+        .carousel-img2 {
+          height: 400px;
+        }
+        .carousel-img3 {
+          height: 400px;
+        }
+        .carousel-img4 {
+          height: 400px;
+        }
+        .carousel-text h1 {
+          padding-top: 30px;
+        }
+      }
+
+    }
+
+    @media screen and (min-width : 1920px) and (max-width : 900px) {
+      .bg-form-header {
+        .bg2-form {
+          .width-form-where {
+            width: 248px;
+          }
+          .width-form-depart {
+            width: 160px;
+          }
+          .width-form-arrive {
+            width: 160px;
+          }
+        }
+      }
+    }
