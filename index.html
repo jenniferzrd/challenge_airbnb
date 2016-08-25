@@ -24,13 +24,24 @@
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" style="margin-left:15px; margin-right:0px;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="display-ico">
+          <!-- BOUTON -->
+          <div class="text-only hidden-sm hidden-md hidden-lg">
+            <div class="pos-destinations" style="padding-top:0;">
+              <button type="submit" class="btn btn-default btn-md destinations-ou">
+                <span class="text-bouton">
+                  Où?
+                </span>
+              </button>
+            </div>
+          </div>
+          <!-- -->
+          <div class="display-ico hidden-xs">
             <a class="navbar-brand logo" href="#">
               <img src="gallery/airbnb-ico.png"/>
             </a>
@@ -40,6 +51,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <form class="navbar-form navbar-left where">
+            <i class="fa fa-search" aria-hidden="true"></i>
             <div class="form-group">
               <input class="form-control form-ou" placeholder="Où ?" type="text">
             </div>
@@ -67,61 +79,50 @@
 
     <div class="container-fluid img-bg-header">
       <div class="row marg-top-txt-header">
+        <div class="col-md-6 col-md-offset-3 hidden-md hidden-sm hidden-lg display-but">
+          <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i>
+        </div>
         <span class="col-md-8 col-md-offset-2 flex-txt-header">
           <h1>Vivez là-bas</h1>
           Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.
         </span>
-        <div class="col-md-6 col-md-offset-3 display-but">
+        <div class="col-md-6 col-md-offset-3 hidden-xs display-but">
           <!-- <button type="button" class="btn btn-default but">En savoir plus sur Airbnb</button> -->
-          <i class="fa fa-play-circle fa-5x hidden-xs" aria-hidden="true"></i>
+          <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i>
         </div>
 
-        <div class="col-md-12 col-xs-12 col-lg-12 bg-form-header">
-          <div class="col-md-12 col-xs-12">
-            <form class="form-inline bg2-form">
-              <div class="form-group form-input">
-                <input type="text" class="form-control width-form-where" id="exampleInputName2" placeholder="Où">
-              </div>
-              <div class="form-group form-input form-arrive hidden-xs">
-                <input type="text" class="form-control width-form-arrive" id="exampleInputEmail2" placeholder="Arrivé">
-              </div>
-              <div class="form-group hidden-xs">
-                <i class="fa fa-long-arrow-right fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="form-group form-input form-depart hidden-xs">
-                <input type="text" class="form-control width-form-depart" id="exampleInputEmail2" placeholder="Départ">
-              </div>
-
-              <ul class="form-group form-dpdown hidden-xs">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    1 voyageur
-                    <span class="caret">
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">
-                        2 voyageurs
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        3 voyageurs
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        4 voyageurs
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <button type="submit" class="btn btn-default form-search hidden-xs">Rechercher</button>
-            </form>
+        <div class="row" style="margin:0;">
+        <div class="col-md-12 col-lg-12 banner">
+          <div class="detail-banner">
+            <div class="col-md-2 col-xs-10 col-sm-4" style="padding-right: 0px; padding-left: 0px;">
+              <input class="form-control width-form-where" id="exampleInputName2" placeholder="Où" type="text">
+            </div>
+            <div class="hidden-sm hidden-md hidden-lg col-xs-2" style="background-color:#FF7E82; margin-right:-15px; display: flex; justify-content: center; align-items: center;">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-2 col-sm-2" style="padding-left: 0px; padding-right: 0px;">
+              <input class="form-control width-form-arrive hidden-xs" id="exampleInputEmail2" placeholder="Arrivé" type="text">
+            </div>
+            <div class="col-md-2" style="padding-top:5px;padding-right: 0px; padding-left: 15px; display:flex; justify-content:center;">
+              <i style="" class="fa fa-long-arrow-right fa-2x hidden-xs" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-2 col-sm-2" style="padding-left: 0px; padding-right: 0px;">
+              <input class="form-control width-form-depart hidden-xs" id="exampleInputEmail2" placeholder="Départ" type="text">
+            </div>
+            <div style="padding-top:5px;padding-left: 0px; padding-right: 0px;" class="col-md-2">
+              <select class="form-control input-md hidden-xs">
+                <option>1 voyageur</option>
+                <option>2 voyageurs</option>
+                <option>3 voyageurs</option>
+                <option>4 voyageur</option>
+              </select>
+            </div>
+            <div style="padding-left: 0px; padding-right: 0px;" class="col-md-2">
+              <button class="btn btn-default form-search hidden-xs">Rechercher</button>
+            </div>
           </div>
         </div>
+      </div>
 
       </div>
     </div> <!-- container fluid -->
@@ -130,21 +131,22 @@
   </header>
 
   <!-- SECTION PHOTOS -->
-  <section>
+
+    <div class="container-fluid">
     <div class="container">
-      <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 top-slider">
-        <div class="col-md-8 col-sm-8 hidden-xs padding-delete">
+      <div class="col-sm-12 col-xs-12 col-md-12 top-slider" style="background-color: white;">
+        <div style="padding-left: 0px;" class="col-md-8 col-sm-8 hidden-xs padding-delete">
           <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <a href="#">
-                  <img src="https://a0.muscache.com/airbnb/static/homepages/host_banner/green-doors-da92547ad2e02558af61a61405d4a414.jpg"/>
-                </a>
-              </div>
               <div class="item">
                 <a href="#">
-                  <img src="https://a1.muscache.com/airbnb/static/homepages/host_banner/welcome-guest-5871637891339a7308a838003ab942bd.jpg" alt="trois_personne_regarde_le_ciel">
+                  <img src="https://a0.muscache.com/airbnb/static/homepages/host_banner/green-doors-da92547ad2e02558af61a61405d4a414.jpg">
+                </a>
+              </div>
+              <div class="item active">
+                <a href="#">
+                  <img style="width: 100%;" src="https://a1.muscache.com/airbnb/static/homepages/host_banner/welcome-guest-5871637891339a7308a838003ab942bd.jpg" alt="trois_personne_regarde_le_ciel">
                 </a>
               </div>
             </div>
@@ -163,7 +165,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- TEXTES -->
 
@@ -180,22 +182,22 @@
 
       <div class="container-fluid bloc-troisimg">
         <div class="container">
-          <div class="col-md-4 col-xs-12 col-sm-12 nopadding-mq">
-            <div class="col-md-12 troisimg">
+          <div class="col-md-4 col-xs-12 col-sm-12 nopadding-mq" style="padding-right:0px;">
+            <div class="col-md-12 troisimg troisimg-mq" style="background: url(https://a1.muscache.com/ic/discover/60?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px); background-size: cover; background-position: center;">
               <a href="#">
                 <span class="lieux"> Lille </span>
               </a>
             </div>
           </div>
           <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq">
-            <div class="col-md-12 troisimg2">
+            <div class="col-md-12 troisimg" style="background: url(https://a0.muscache.com/ic/discover/2510?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px); background-size: cover; background-position: center;">
               <a href="#">
                 <span class="lieux"> Bruxelles </span>
               </a>
             </div>
           </div>
-          <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq">
-            <div class="col-md-12 troisimg3">
+          <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq" style="padding-right:0px;">
+            <div class="col-md-12 troisimg" style="background: url(https://a0.muscache.com/ic/discover/41?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px); background-size: cover; background-position: center;">
               <a href="#">
                 <span class="lieux"> Londres </span>
               </a>
@@ -233,14 +235,14 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-xs-12 col-sm-12 padding-b-bloc-xl">
-                  <div class="col-md-12 bloc-xl">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/ic/discover/180?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=655px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Lisbonne </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-12 col-sm-6 padding-b-bloc-xl">
-                  <div class="col-md-12 bloc-xl2">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/im/pictures/10389108/0bf5beb7_original.jpg?aki_policy=x_medium); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Chez Paul et Jessica </span>
                     </a>
@@ -248,21 +250,21 @@
                 </div>
 
                 <div class="col-md-4 col-xs-12 col-sm-6 padding-b-bloc-xl">
-                  <div class="col-md-12 bloc-xl3">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a2.muscache.com/ic/discover/9?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Amsterdam </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-6 padding-b-bloc-xl hidden-xs">
-                  <div class="col-md-12 bloc-xl4">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a1.muscache.com/ic/discover/84?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> New York </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-6 padding-b-bloc-xl hidden-xs">
-                  <div class="col-md-12 bloc-xl5">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/ic/pictures/discovery/attribute_photos/romantic_1x1.jpg?interpolation=lanczos-none&output-format=jpg&output-quality=70&size=large_cover&downsize=326px:326px&v=6); background-position:center;">
                     <a href="#">
                       <span class="lieux"> Espace romantique à Venise </span>
                     </a>
@@ -270,37 +272,36 @@
                 </div>
 
                 <div class="col-md-4 col-xs-12 col-sm-6 padding-b-bloc-xl">
-                  <div class="col-md-12 bloc-xl6">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a1.muscache.com/im/pictures/11352162/82f4a41d_original.jpg?aki_policy=x_medium); background-size: cover">
                     <a href="#">
                       <span class="lieux"> Chez Susanna </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-8 col-sm-6 padding-b-bloc-xl hidden-xs rome-devient-berlin">
-                  <div class="col-md-12 bloc-xl7">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/ic/discover/291?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=655px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Rome </span>
                     </a>
                   </div>
                 </div>
 
-
                 <div class="col-md-4 col-sm-12 padding-b-bloc-xl hidden-xs berlin-devient-rome">
-                  <div class="col-md-12 bloc-xl8">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a1.muscache.com/ic/discover/94?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Berlin </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-6 padding-b-bloc-xl hidden-xs">
-                  <div class="col-md-12 bloc-xl9">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/ic/discover/840?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=326px:326px); background-size: cover;">
                     <a href="#">
                       <span class="lieux"> Bordeaux </span>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-6 padding-b-bloc-xl hidden-xs">
-                  <div class="col-md-12 bloc-xl10">
+                  <div class="col-md-12 bloc-xl" style="background-image: url(https://a0.muscache.com/ic/pictures/discovery/attribute_photos/surfing_1x1.jpg?interpolation=lanczos-none&output-format=jpg&output-quality=70&size=large_cover&downsize=326px:326px&v=6); background-position: center;">
                     <a href="#">
                       <span class="lieux"> Surf à Biarritz </span>
                     </a>
@@ -326,22 +327,22 @@
 
               <div class="container-fluid bloc-troisimg">
                 <div class="container">
-                  <div class="col-md-4 col-xs-12 col-sm-12 nopadding-mq">
-                    <div class="col-md-12 troisimg4">
+                  <div class="col-md-4 col-xs-12 col-sm-12 nopadding-mq" style="padding-right:0px;">
+                    <div class="col-md-12 troisimg troisimg4" style="background-image: url(https://a2.muscache.com/ac/pictures/2a4e63c3-c981-4cbc-9c37-80a6ab3a9d24.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70); background-size: cover; background-position: center;">
                       <a href="#">
                         <span class="lieux"> San Francisco </span>
                       </a>
                     </div>
                   </div>
                   <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq">
-                    <div class="col-md-12 troisimg5">
+                    <div class="col-md-12 troisimg" style="background-image: url(https://a2.muscache.com/ac/pictures/cf3b9363-34e4-4532-b051-6a7663410854.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70); background-size: cover; background-position: center;">
                       <a href="#">
                         <span class="lieux"> New York </span>
                       </a>
                     </div>
                   </div>
-                  <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq">
-                    <div class="col-md-12 troisimg6">
+                  <div class="col-md-4 col-xs-12 col-sm-6 nopadding-mq" style="padding-right:0px;">
+                    <div class="col-md-12 troisimg" style="background-image: url(https://a2.muscache.com/ac/pictures/b62aa572-cf0b-4e4a-b886-a039a0250cf3.jpg?interpolation=lanczos-none&size=large&output-format=jpg&output-quality=70); background-size: cover; background-position: center;">
                       <a href="#">
                         <span class="lieux"> Londres </span>
                       </a>
@@ -404,17 +405,28 @@
                           Grâce à Airbnb, vous vous sentirez chez vous en vacances.
                           De villas de luxe aux appartements conviviaux parfaits pour les séjours en vacances, vous trouverez le logement de vos rêves.
                         </h4>
+                        <!-- BOUTON -->
+                        <div class="text-only">
+                          <div class="col-sm-12 pos-destinations" style="padding-top:0;">
+                            <button type="submit" class="btn btn-default btn-md destinations-slider">
+                              <span class="text-bouton">
+                                Start exploring
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- -->
                       </div>
                     </div>
                   </div>
 
                   <div class="item carousel-img4">
                     <div class="container">
-                      <div class="col-md-12 carousel-text2">
-                        <div class="col-md-4">
+                      <div class="col-md-12 col-sm-12 carousel-text2">
+                        <div class="col-md-4 col-sm-4">
                           <img style="display: block;" src="https://a0.muscache.com/airbnb/static/homepages/create-01-91da0830c13bb80e81530326600da7a5.png" alt="Créer Airbnb"/>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-sm-8">
                           <h2>
                             Appropriez-vous Airbnb
                           </h2>
@@ -612,11 +624,11 @@
 
                   <!-- <div style="position:relative">
                   <div class="video" style="position:absolute; width:100%">
-                    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted>
-                    <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.mp4" type="video/mp4">
-                      <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.webm" type="video/webm">
-                  </video>
-                </div>
-              </div> -->
-                      </body>
-                      </html>
+                  <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted>
+                  <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.mp4" type="video/mp4">
+                  <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.webm" type="video/webm">
+                </video>
+              </div>
+            </div> -->
+          </body>
+          </html>
